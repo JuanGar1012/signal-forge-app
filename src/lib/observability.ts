@@ -37,5 +37,5 @@ export function readRequestId(headers: Headers): string {
   if (requestId && requestId.trim().length > 0) {
     return requestId;
   }
-  return "unknown";
+  return crypto.randomUUID();
 }
